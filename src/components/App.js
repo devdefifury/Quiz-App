@@ -1,4 +1,5 @@
 import { useReducer, useEffect } from 'react'
+// import MediaQuery from 'react-responsive'
 
 import Header from './Header'
 import Main from './Main'

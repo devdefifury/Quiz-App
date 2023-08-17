@@ -24,6 +24,7 @@ html {
 
 body {
   min-height: 100vh;
+  width: 100%;
   color: var(--color-light);
   background-color: var(--color-darkest);
   padding: 3.2rem;
@@ -34,14 +35,19 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* width: auto; */
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
 }
 
 .main {
-  width: 50rem;
+  /* width: 50rem; */
+  width: 100%;
 }
 
 .app-header {
-  width: 66rem;
+  width: auto;
   margin-bottom: 4rem;
   display: flex;
   align-items: center;
@@ -256,4 +262,214 @@ progress {
 .counter * {
   font-size: inherit;
   padding: 0.8rem;
+}
+
+/* MEDIA QUERIES 
+320px — 480px: Mobile devices.
+481px — 768px: iPads, Tablets.
+769px — 1024px: Small screens, laptops.
+1025px — 1200px: Desktops, large screens.
+1201px and more — Extra large screens, TV.
+*/
+
+@media (max-width: 480px) {
+  body {
+    /* min-height: 100vh; */
+    height: 100%;
+    color: var(--color-light);
+    background-color: var(--color-darkest);
+    padding: 3.2rem;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .main {
+    /* width: 100%; */
+    width: 40rem;
+    /* overflow-x: hidden; */
+  }
+
+  .app-header {
+    width: auto;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-family: 'Codystar';
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2.4rem;
+  }
+
+  .btn {
+    display: block;
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.5rem;
+    border: 2px solid var(--color-dark);
+    background-color: var(--color-dark);
+    padding: 1rem 2.2rem;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.3s;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .btn-option {
+    width: 100%;
+    text-align: left;
+  }
+
+  .progress {
+    margin-bottom: 4rem;
+    display: grid;
+    justify-content: space-between;
+    gap: 1.2rem;
+    grid-template-columns: auto auto;
+    font-size: 1.2rem;
+    color: var(--color-medium);
+  }
+
+  progress {
+    -webkit-appearance: none;
+    width: auto;
+    height: 12px;
+    grid-column: 1 / -1;
+  }
+
+  .timer {
+    float: left;
+    font-size: 1.2rem;
+    color: var(--color-medium);
+    border: 2px solid var(--color-dark);
+    padding: 1.2rem 2.2rem;
+    border-radius: 100px;
+  }
+
+  .result {
+    background-color: var(--color-theme);
+    color: var(--color-light);
+    border-radius: 100px;
+    text-align: center;
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+  }
+
+  .result span {
+    font-size: 2.2rem;
+    margin-right: 4px;
+  }
+}
+
+@media (max-width: 408px) {
+  .main {
+    width: 100%;
+  }
+
+  h1 {
+    font-family: 'Codystar';
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 383px) {
+  .main {
+    width: 100%;
+  }
+
+  .app-header {
+    width: auto;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-family: 'Codystar';
+    font-size: 2.5rem;
+  }
+
+  .result {
+    background-color: var(--color-theme);
+    color: var(--color-light);
+    border-radius: 100px;
+    text-align: center;
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+  }
+
+  .result span {
+    font-size: 1.5rem;
+    margin-right: 4px;
+  }
+
+  .highscore {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 4.8rem;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-family: 'Codystar';
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+  }
+
+  .result {
+    font-size: 1.2rem;
+  }
+
+  .highscore {
+    font-size: 1.2rem;
+  }
 }
